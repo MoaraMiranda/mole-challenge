@@ -1,0 +1,72 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html,
+body {
+  height: 100%;
+}
+body {
+  background-image: url(images/background.svg);
+  background-color: green;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+}
+.toupeiras {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  grid-column-gap: 50px;
+  grid-row-gap: 50px;
+  padding: 250px 0 0 0;
+  justify-items: center;
+}
+.toupeira {
+  background-image: url(images/hole.svg);
+  background-repeat: none;
+  width: 221px;
+  height: 168px;
+}
+
+.toupeira:hover img {
+  animation-name: mole-animation;
+  animation-duration: 0.3s;
+  animation-timing-function: ease;
+}
+
+.toupeira img {
+  opacity: 0%;
+  position: absolute;
+}
+
+.anima {
+  animation-delay: 0s;
+}
+.anima2 {
+  animation-delay: 0.3s;
+}
+.anima3 {
+  animation-delay: 0.4s;
+}
+.anima4 {
+  animation-delay: 0.5s;
+}
+.anima5 {
+  animation-delay: 0.6s;
+}
+@keyframes mole-animation {
+  0% {
+    opacity: 0%;
+  }
+  50% {
+    opacity: 75%;
+  }
+  100% {
+    opacity: 100%;
+  }
+}
